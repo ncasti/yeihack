@@ -1,0 +1,10 @@
+<h1> Student Profile </h1>
+
+Name: <%= @student.name %><br>
+Email: <%= @student.email %><br>
+Field: <%= @student.field %><br>
+Status: <% if @student.mentor_id != nil %>
+        <%= "Matched with " + Mentor.find(@student.mentor_id).name.to_s%>
+        <% else %>
+        <%= "Matching in progress" %>
+        <% end %>
