@@ -1,8 +1,8 @@
 <h1>MentorNH</h1>
-<p>Welcome to MentorNH. We are a service that connects young New Haven professionals with Yale students who are interested in similar fields. Signup to get apired   
 
+<p>Welcome to MentorNH. We are a service that connects young New Haven professionals with Yale students who are interested in similar fields. Signup to take part in this cool program. We will pair you with a mentor/student who can grab coffee with you.</p>
 
+<h2>Get involved now!</h2>
 
-
-StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<%= button_to "Signup as Mentor", new_mentor_path, :class=> "button", :method => :get %>
+<%= button_to "Signup as Student", new_student_path, :class=> "button", :method => :get %>
