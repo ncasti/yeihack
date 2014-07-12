@@ -1,0 +1,16 @@
+<h1>Create new mentor account</h1>
+
+<h2>Sign Up with LinkedIn (recommended)</h2>
+
+
+<h2>Sign Up Without LinkedIn (recommended) </h2>
+
+<%= form_for(@mentor) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
