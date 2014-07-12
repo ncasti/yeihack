@@ -11,6 +11,12 @@ class MentorsController < ApplicationController
     @mentor.save
     matchedStudents = @mentor.find_students
 
+    if matchedStudents != []
+      matchedStudents.each do |student|
+        UserMailer.send_pairing_email(@mentor, student).deliver
+      end
+    end  
+
     redirect_to mentor_path(@mentor.id)
 	end
 

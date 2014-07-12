@@ -13,7 +13,11 @@ class StudentsController < ApplicationController
     end
     
     @student.save
-    
+
+    if @student.mentor_id != nil
+      mentor = Mentor.find(@student.mentor_id)
+      UserMailer.send_pairing_email(mentor, @student).deliver
+    end  
 
     redirect_to student_path(@student.id)
   end
