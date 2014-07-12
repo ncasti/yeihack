@@ -2,6 +2,7 @@
 
 Name: <%= @mentor.name %><br>
 Email: <%= @mentor.email %><br>
+Bio: <%= @mentor.bio %><br>
 Field: <%= @mentor.field %><br>
 Status: <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
 

@@ -2,6 +2,7 @@
 
 Name: <%= @student.name %><br>
 Email: <%= @student.email %><br>
+Bio: <%= @student.bio %><br>
 Field: <%= @student.field %><br>
 Status: <% if @student.mentor_id != nil %>
         <%= "Matched with " + Mentor.find(@student.mentor_id).name.to_s%>

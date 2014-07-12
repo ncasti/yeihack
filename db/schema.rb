@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712172409) do
+ActiveRecord::Schema.define(version: 20140712185159) do
 
   create_table "mentors", force: true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140712172409) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "mentor_id"
+    t.string   "bio"
   end
 
 end
