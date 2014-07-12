@@ -4,11 +4,13 @@ Name: <%= @mentor.name %><br>
 Email: <%= @mentor.email %><br>
 Bio: <%= @mentor.bio %><br>
 Field: <%= @mentor.field %><br>
-Status: <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
-
+Status: 
+<% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
+	<% relevant_students = Array.new %>
     Matched with <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
-	    <%= student.name %>
+    	<% relevant_students.push(student.name) %>
     <% end %>
+    <%= relevant_students.join(", ") %>
 <% else %>
     <%= "Matching in progress" %>
 <% end %>
