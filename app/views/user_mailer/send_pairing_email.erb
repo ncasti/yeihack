@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for signing up, <%= @student.name %> and <%= @mentor.name %>!</h1>
+    <p>Hi, I am Zach Young from MentorNH. You both have expressed interest in meeting others interested in the <%= @mentor.field %> field. Your emails are <%= @student.email %> and <%= @mentor.email %>. I encourage you to coordinate with each other to set up a coffee meet-up. Let us at MentorNH know if you have any questions! Finally, some brief introductions:<br><br>
+
+    <%= @student.name %>: <%= @student.bio %><br> 
+    <%= @mentor.name %>: <%= @mentor.bio %><br><br>
+
+    All best,<br>
+    Zach
+    </p>
+
+
+  </body>
+</html>
