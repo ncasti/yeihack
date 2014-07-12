@@ -14,3 +14,12 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :field %><br>
+    <%= f.select :field, options_for_select([["Select One", ""], "Financial Services", "Education", "Consulting", "Research", "Computer Science", "Publishing/Media/Journalism", "Healthcare", "Fine/Performing Arts", "Public Policy/Politics", "Law", "Communications", "Architecture", "Design", "Retail", "Medicine", "Entertainment/Professional Sports", "Environment"]), :class => "field_dropdown" %>
+
+  </div>
+
+
+  <%= f.submit %>
+<% end %>
