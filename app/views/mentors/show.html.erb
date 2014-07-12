@@ -8,9 +8,8 @@ Status:
 <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
 	<% relevant_students = Array.new %>
     Matched with <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
-    	<% relevant_students.push(student.name) %>
+      <%= link_to student.name, student_path(student.id) %>&nbsp;&nbsp;&nbsp;
     <% end %>
-    <%= relevant_students.join(", ") %>
 <% else %>
     <%= "Matching in progress" %>
 <% end %>
