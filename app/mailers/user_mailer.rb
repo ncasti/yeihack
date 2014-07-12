@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "morethancoffeewebapp@gmail.com"
+  default from: "mentornewhaven@gmail.com"
 
   def send_pairing_email(mentor, student)
   	@mentor =  mentor
