@@ -8,8 +8,12 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
+    if @student.find_mentor != nil
+      @student.mentor_id =  @student.find_mentor.id
+    end
+    
     @student.save
-    @student.find_mentor
+    
   end
 
   private
