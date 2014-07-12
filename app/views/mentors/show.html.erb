@@ -6,9 +6,9 @@ Bio: <%= @mentor.bio %><br>
 Field: <%= @mentor.field %><br>
 Status: <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
 
-        Matched with: <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
-        <%= student.name %><br>
-        <% end %>
-        <% else %>
-        <%= "Matching in progress" %>
-        <% end %>
+    Matched with <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
+	    <%= student.name %>
+    <% end %>
+<% else %>
+    <%= "Matching in progress" %>
+<% end %>

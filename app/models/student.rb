@@ -15,9 +15,14 @@ class Student < ActiveRecord::Base
 					foundMentor = mentor
 				end
 			end
-
 		end
-		
+
+		if foundMentor != nil
+			if Student.all.where(mentor_id: foundMentor.id).count > 5
+				foundMentor = nil
+			end
+		end
+
 		return foundMentor
 	end
 
