@@ -13,3 +13,91 @@
  *= require_tree .
  *= require_self
  */
+
+
+.home {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     }
+
+
+.homeb {
+   border: 3px outset black;
+   background-color: white;
+   height:100px;
+   width:300px;
+   cursor:pointer;
+   font-family: 'Lato', sans-serif;
+   font-size:20px;
+   display:block;
+   margin-left:auto;
+   margin-right: auto;
+}
+
+.header {
+	width: 100%;
+	margin-bottom: 10em;
+}
+
+/*SIGN UP HEADER*/
+.signupimg {
+	width: 150px;
+    height: auto;
+    position: absolute;
+    display: block;
+}
+
+
+#supttl {
+font-family: 'Lato', sans-serif;
+font-size: 90px;
+text-align: center;
+}
+
+#supsub {
+font-family: 'Lato', sans-serif;
+font-size: 20px;
+text-align:center;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+/*FORMS*/
+
+form {
+	text-align: center;
+	width: 30%;
+	margin-left: 35%;
+	margin-right: 35%;
+
+}
+
+label {
+	font-family: 'Lato', sans-serif;
+	font-size:20px;
+}
+
+input {
+	width: 100%;
+	display:block;
+	height:30px;
+}
+
+select {
+	width: 100%;
+}
+
+/*TEXT*/
+p, h2 {
+font-family: 'Lato', sans-serif;
+text-align: center;
+display: block;
+margin-left: 30%;
+margin-right: 30%;
+
+}

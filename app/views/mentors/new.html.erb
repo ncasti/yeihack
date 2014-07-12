@@ -1,25 +1,23 @@
-<h1>Create new mentor account</h1>
+<div class="header">
+  <%= image_tag('logo.png', :class=>"signupimg") %>
+  <div id="supttl">MENTOR</div>
+  <div id="supsub">SIGN UP</div>
+</div>
+<div class="content">
+  <%= form_for(@mentor) do |f| %>
+    <div class="field">
+      <%= f.text_field :name, placeholder: "name" %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_field :email, placeholder: "email" %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.select :field, options_for_select([["Select One", ""], "Financial Services", "Education", "Consulting", "Research", "Computer Science", "Publishing/Media/Journalism", "Healthcare", "Fine/Performing Arts", "Public Policy/Politics", "Law", "Communications", "Architecture", "Design", "Retail", "Medicine", "Entertainment/Professional Sports", "Environment"]), :class => "field_dropdown" %>
+    </div>
+    <br>
 
-<h2>Sign Up </h2>
-
-<%= form_for(@mentor) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :bio %> (10 words)<br>
-    <%= f.text_field :bio %>
-  </div>
-  <div class="field">
-    <%= f.label :field %><br>
-    <%= f.select :field, options_for_select([["Select One", ""], "Financial Services", "Education", "Consulting", "Research", "Computer Science", "Publishing/Media/Journalism", "Healthcare", "Fine/Performing Arts", "Public Policy/Politics", "Law", "Communications", "Architecture", "Design", "Retail", "Medicine", "Entertainment/Professional Sports", "Environment"]), :class => "field_dropdown" %>
-  </div><br>
-
-
-  <%= f.submit "Match me!" %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
+</div>

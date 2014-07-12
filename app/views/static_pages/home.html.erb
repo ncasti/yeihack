@@ -1,8 +1,15 @@
-<h1>MentorNH</h1>
+<div>
+<%= image_tag('logo.png', :class=>"home") %>
+</div>
+<h2>I AM A...</h2>
+<div>
+<%= button_to "MENTOR", new_mentor_path, :class=> "button", :method => :get, :class => "homeb" %> <br><br><%= button_to "STUDENT", new_student_path, :class=> "button", :method => :get, :class => "homeb" %>
+</div>
+
+
+<br>	
+
+
+
 
 <p>Welcome to MentorNH. We are a service that connects young New Haven professionals with Yale students who are interested in similar fields. Signup to take part in this cool program. We will pair you with a mentor/student who can grab coffee with you.</p>
-
-<h2>Get involved now!</h2>
-
-<%= button_to "Signup as Mentor", new_mentor_path, :class=> "button", :method => :get %>
-<%= button_to "Signup as Student", new_student_path, :class=> "button", :method => :get %>
