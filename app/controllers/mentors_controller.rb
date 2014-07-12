@@ -10,6 +10,8 @@ class MentorsController < ApplicationController
 		@mentor = Mentor.new(mentor_params)
     @mentor.save
     matchedStudents = @mentor.find_students
+
+    redirect_to mentor_path(@mentor.id)
 	end
 
   def show

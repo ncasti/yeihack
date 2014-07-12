@@ -3,8 +3,9 @@
 Name: <%= @mentor.name %><br>
 Email: <%= @mentor.email %><br>
 Field: <%= @mentor.field %><br>
-Status: "Matched with "<% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
-        <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
+Status: <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
+
+        Matched with: <% Student.all.where(mentor_id: @mentor.id).each do |student| %>
         <%= student.name %><br>
         <% end %>
         <% else %>
