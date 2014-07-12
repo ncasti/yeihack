@@ -1,10 +1,11 @@
+<%= link_to image_tag('logo.png', :class=>"signupimg"), root_path %>
 <div class="profile">
-<h1> Mentor Profile </h1>
-Name: <%= @mentor.name %><br>
-Email: <%= @mentor.email %><br>
-Bio: <%= @mentor.bio %><br>
-Field: <%= @mentor.field %><br>
-Status: 
+<h1> MENTOR PROFILE </h1>
+<b>NAME:</b> <%= @mentor.name %><br>
+<b>EMAIL:</b> <%= @mentor.email %><br>
+<b>BIO:</b> <%= @mentor.bio %><br>
+<b>FIELD:</b> <%= @mentor.field %><br>
+<b>STATUS:</b> 
 <% if Student.all.find_by(mentor_id: @mentor.id) != nil %>
 	<% relevant_students = Array.new %>
     Matched with <% Student.all.where(mentor_id: @mentor.id).each do |student| %>

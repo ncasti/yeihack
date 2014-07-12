@@ -1,10 +1,11 @@
-<h1> Student Profile </h1>
+<%= link_to image_tag('logo.png', :class=>"signupimg"), root_path %>
+<div class="profile"><h1> STUDENT PROFILE </h1>
 
-Name: <%= @student.name %><br>
-Email: <%= @student.email %><br>
-Bio: <%= @student.bio %><br>
-Field: <%= @student.field %><br>
-Status: <% if @student.mentor_id != nil %>
+<B>Name:</B> <%= @student.name %><br>
+<B>Email:</B> <%= @student.email %><br>
+<B>Bio:</B> <%= @student.bio %><br>
+<B>Field:</B> <%= @student.field %><br>
+<B>Status:</B> <% if @student.mentor_id != nil %>
         Matched with <%= link_to Mentor.find(@student.mentor_id).name.to_s, mentor_path(Mentor.find(@student.mentor_id))%>
         <% else %>
         <%= "Matching in progress" %>
@@ -14,4 +15,5 @@ Status: <% if @student.mentor_id != nil %>
 <br>
 <div>
 <h4>If you would like to end a mentoring relationship, please contact us <a href="mailto:zachary.young@yale.edu?Subject=Delete%20MentorNH%20Relationship">here</a>.</h4>
+</div>
 </div>
