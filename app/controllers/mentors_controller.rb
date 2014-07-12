@@ -11,6 +11,10 @@ class MentorsController < ApplicationController
     @mentor.save
 	end
 
+  def show
+    @mentor = Mentor.find(params[:id])
+  end
+
   private
     def mentor_params
       params.require(:mentor).permit(:name, :email, :field)

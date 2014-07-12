@@ -14,6 +14,12 @@ class StudentsController < ApplicationController
     
     @student.save
     
+
+    redirect_to student_path(@student.id)
+  end
+
+  def show
+    @student = Student.find(params[:id])
   end
 
   private
